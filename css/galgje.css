@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+.design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
 .sidebarLeft {
   height: 100%;
   width: 15%;
