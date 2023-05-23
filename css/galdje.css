@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebarLeft {
+  height: 100%;
+  width: 15%;
+  background-color: black;
+}
+
+.sidebarRight {
+  height: 100%;
+  width: 15%;
+  background-color: black;
+}
+
+.view {
+  height: 100%;
+  width: 70%;
+  background-color: aliceblue;
+}
