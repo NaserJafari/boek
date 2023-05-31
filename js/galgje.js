@@ -138,6 +138,8 @@ document.addEventListener("DOMContentLoaded", function () {
     optionsButtons.forEach((button) => {
       if (button.innerText.toLowerCase() === optionValue) {
         button.classList.add("active");
+      } else {
+        button.classList.remove("active");
       }
       button.disable = true;
     });
