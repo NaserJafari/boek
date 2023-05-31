@@ -10,24 +10,46 @@
   align-items: center;
 
   width: 100%;
-  height: 100vh;
-  background-color: black;
-}
+  height: 80vh;
+  background-color: white;
 
-.sidebarLeft {
-  height: 100%;
-  width: 15%;
-  background-color: black;
-}
-
-.sidebarRight {
-  height: 100%;
-  width: 15%;
-  background-color: black;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .view {
   height: 100%;
   width: 70%;
   background-color: aliceblue;
+  padding: 3em;
+}
+
+#options-container {
+  text-align: center;
+}
+#options-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 0 2.4em 0;
+}
+#options-container button {
+  padding: 0.6em 1.2em;
+  border: solid 2px black;
+  background-color: white(255, 232, 254);
+  color: black;
+  border-radius: 0.3em;
+  text-transform: capitalize;
+}
+#options-container button:disabled {
+  color: #808080;
+  border: solid 2px #808080;
+  background-color: #efefef;
+}
+#options-container button:active {
+  background-color: lightgreen;
+  border: solid 2px black;
+  color: black;
 }
