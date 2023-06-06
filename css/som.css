@@ -36,6 +36,10 @@
   color: #ba1f33;
 }
 
+#startgame:hover {
+  cursor: pointer;
+}
+
 #score {
   color: #fe9000;
 }
@@ -84,4 +88,20 @@
   width: 20px;
   height: 20px;
   background-color: chocolate;
+}
+
+#box1,
+#box2,
+#box3,
+#box4:hover {
+  cursor: pointer;
+}
+
+#gameover {
+  color: #fe9000;
+  font-size: 50px;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  z-index: 1;
 }
