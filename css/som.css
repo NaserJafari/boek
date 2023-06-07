@@ -1,107 +1,97 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+  background-color: #f7f7f7;
+  font-family: "Arial", sans-serif;
+  text-align: center;
 }
 
 #som-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.som-box-container {
-  width: auto;
-  height: auto;
-  background-color: #5adbff;
-  padding: 50px;
-  border-radius: 20px;
-  z-index: 1;
-  border: solid 3px #000;
-  box-shadow: 4px 6px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 #startgame {
-  background-color: #fe9000;
-  padding: 6px;
-  border-radius: 9px;
-  width: 50%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #ba1f33;
-}
-
-#startgame:hover {
+  background-color: #37b4e4;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
 #score {
-  color: #fe9000;
+  font-size: 24px;
+  margin: 20px 0;
 }
 
 #scorevalue {
-  color: #fe9000;
+  font-weight: bold;
 }
 
 #timeremaining {
-  color: #fe9000;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 #timeremainingvalue {
-  color: #fe9000;
+  font-weight: bold;
 }
 
 #correct {
-  color: green;
-  position: absolute;
-  top: 250px;
-  z-index: -1;
+  background-color: #00cc66;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: none;
 }
 
 #wrong {
-  color: red;
-  position: absolute;
-  top: 250px;
-  left: 780px;
+  background-color: #ff3300;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: none;
 }
 
 #question {
-  font-size: 20px;
+  background-color: #ffffff;
+  font-size: 28px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #37b4e4;
+  border-radius: 5px;
+}
+
+#instruction {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 #choices {
-  height: auto;
   display: flex;
-  justify-content: space-between;
-  padding: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-#box1,
-#box2,
-#box3,
-#box4 {
-  width: 20px;
-  height: 20px;
-  background-color: chocolate;
-}
-
-#box1,
-#box2,
-#box3,
-#box4:hover {
+.box {
+  background-color: #37b4e4;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px;
   cursor: pointer;
+  flex-basis: calc(50% - 40px);
+  max-width: 250px;
 }
 
-#gameover {
-  color: #fe9000;
-  font-size: 50px;
-  position: absolute;
-  top: 250px;
-  left: 300px;
-  z-index: 1;
+#gameOver {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
 }
