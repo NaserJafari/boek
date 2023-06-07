@@ -199,38 +199,27 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const isGameOver = () => {
-    const remainingLetters = wordList.filter(
-      (letter) => !guessedLetters.includes(letter)
+    return (
+      wordList.every((letter) => guessedLetters.includes(letter)) ||
+      incorrectGuesses >= 6
     );
-    return remainingLetters.length === 0 || incorrectGuesses >= 6;
   };
 
   const endGame = () => {
     setCategoryButtonsActiveState(false, null);
 
-    if (incorrectGuesses >= 6) {
-      const revealedWord = wordList.join("");
-      alert(`Round ${round} over! You lost. The word was: ${revealedWord}`);
-      consecutiveWins = 0; // Reset consecutive wins counter
-    } else {
-      alert(`Round ${round} over! Congratulations! You won.`);
+    const revealedLetters = wordList.filter((letter) =>
+      guessedLetters.includes(letter)
+    );
+    if (revealedLetters.length === wordList.length) {
+      alert("Congratulations! You won.");
       consecutiveWins++;
       score++;
       scoreElement.textContent = `Score: ${score}`;
-    }
-
-    if (consecutiveWins >= 3) {
-      alert("Congratulations! You won three rounds in a row!");
-      consecutiveWins = 0; // Reset consecutive wins counter
-    }
-
-    round++;
-
-    if (round <= 3) {
-      roundElement.textContent = `Round ${round}`;
-      initializeGame();
     } else {
-      alert("Game over!");
+      const revealedWord = wordList.join("");
+      alert(`You lost. The word was: ${revealedWord}`);
+      consecutiveWins = 0; // Reset consecutive wins counter
     }
   };
 
