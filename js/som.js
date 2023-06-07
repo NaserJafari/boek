@@ -17,13 +17,15 @@ document.getElementById("startgame").onclick = function () {
 
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
 
-    hide("gameOver");
+    hide("gameover");
+    hide("correct");
+    hide("wrong");
 
     document.getElementById("startgame").innerHTML = "Reset Game";
 
     startCountdown();
 
-    generateQA();
+    genretaQuestion();
   }
 };
 
@@ -38,6 +40,9 @@ for (let i = 1; i < 5; i++) {
         setTimeout(function () {
           hide("correct");
         }, 1000);
+
+        genretaQuestion();
+
       } else {
         score--;
         document.getElementById("scorevalue").innerHTML = score;
@@ -59,10 +64,10 @@ function startCountdown() {
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
     if (timeremaining == 0) {
       stopCountdown();
-      show("gameOver");
+      show("gameover");
 
       //game over
-      document.getElementById("gameOver").innerHTML =
+      document.getElementById("gameover").innerHTML =
         "<p>Game over!</p><p>Your score is " + score + ".</p>";
       hide("timeremaining");
       hide("correct");
@@ -86,7 +91,7 @@ function show(Id) {
   document.getElementById(Id).style.display = "block";
 }
 
-function generateQA() {
+function genretaQuestion() {
   let x = 1 + Math.round(9 * Math.random());
   let y = 1 + Math.round(9 * Math.random());
   correctAnswer = x * y;
