@@ -27,7 +27,7 @@ document.getElementById("startgame").onclick = function () {
   }
 };
 
-for (i = 1; i < 5; i++) {
+for (let i = 1; i < 5; i++) {
   document.getElementById("box" + i).onclick = function () {
     if (playing == true) {
       if (this.innerHTML == correctAnswer) {
@@ -38,14 +38,16 @@ for (i = 1; i < 5; i++) {
         setTimeout(function () {
           hide("correct");
         }, 1000);
-        generateQA();
       } else {
+        score--;
+        document.getElementById("scorevalue").innerHTML = score;
         hide("correct");
         show("wrong");
         setTimeout(function () {
           hide("wrong");
         }, 1000);
       }
+      generateQA();
     }
   };
 }
@@ -96,7 +98,7 @@ function generateQA() {
 
   let answers = [correctAnswer];
 
-  for (i = 1; i < 5; i++) {
+  for (let i = 1; i < 5; i++) {
     if (i != correctPosition) {
       let wrongAnswer;
       do {
