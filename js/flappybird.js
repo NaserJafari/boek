@@ -31,8 +31,8 @@ let bottomPipeImg;
 
 //physics
 let velocityX = -2;
-let velocityY = 1;
-let gravity = 0.4;
+let velocityY = -4;
+let gravity = 0.2;
 
 let gameOver = false;
 let score = 0;
@@ -97,13 +97,17 @@ function update() {
 
     //score
     context.fillStyle = "white";
-    context.font="45px sans-serif";
+    context.font = "45px sans-serif";
     context.fillText(score, 5, 45);
 
-    if (gameOver) {
+    if (score >= 10) {
+        gameOver = true;
+        context.fillText("YOU WON!", 5, 90);
+    } else if (gameOver) {
         context.fillText("GAME OVER", 5, 90);
     }
 }
+
 
 function placePipes() {
     if (gameOver) {
