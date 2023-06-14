@@ -59,3 +59,11 @@ h1 {
   color: #808080;
   cursor: default;
 }
+
+#reset-button {
+  margin-top: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
