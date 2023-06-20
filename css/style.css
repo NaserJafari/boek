@@ -12,12 +12,13 @@ body {
   flex-direction: column;
   font-family: sans-serif;
   background-color: gray;
+  overflow: hidden;
 }
 
 .book {
   position: relative;
-  width: 400px;
-  height: 550px;
+  width: 600px;
+  height: 650px;
   transition: transform 0.5s;
 }
 .buttons {
