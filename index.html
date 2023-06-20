@@ -21,8 +21,26 @@
           </div>
         </div>
         <div class="back">
-          <div id="b1" class="back-content">
-            <h1>Back 1</h1>
+          <div id="back1" class="back-content">
+            <div class="tictactoetext">
+              <h1>You’re playing Tic tac Toe</h1>
+
+              <p id="ins">
+                The game starts by tapping one of the boxes.
+                <br /><br />
+                The first player will put down their icon and then it’s the
+                second player's turn to click on one of the boxes to put down
+                their own icon.
+                <br /><br />
+                This goes on until someone gets 3 of their icon in a row
+                (horizontal, vertical or diagonal) or if the entire board is
+                filled up without any clear winner which will turn the game into
+                a draw. If the game
+                <br /><br />
+                becomes a draw you click on the reset button to play again until
+                you win, same with if you lose.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -30,11 +48,89 @@
       <div id="p2" class="paper">
         <div class="front">
           <div id="f2" class="front-content">
-            <h1>Front 2</h1>
+            <div id="main">
+              <h1>TIC TAC TOE</h1>
+
+              <br /><br />
+              <!-- 3*3 grid of Boxes -->
+              <input
+                type="text"
+                id="b1"
+                onclick="myfunc_3(); myfunc();"
+                readonly
+              />
+
+              <input
+                type="text"
+                id="b2"
+                onclick="myfunc_4(); myfunc();"
+                readonly
+              />
+
+              <input
+                type="text"
+                id="b3"
+                onclick="myfunc_5(); myfunc();"
+                readonly
+              />
+              <br /><br />
+
+              <input
+                type="text"
+                id="b4"
+                onclick="myfunc_6(); myfunc();"
+                readonly
+              />
+
+              <input
+                type="text"
+                id="b5"
+                onclick="myfunc_7(); myfunc();"
+                readonly
+              />
+
+              <input
+                type="text"
+                id="b6"
+                onclick="myfunc_8(); myfunc();"
+                readonly
+              />
+              <br /><br />
+
+              <input
+                type="text"
+                id="b7"
+                onclick="myfunc_9(); myfunc();"
+                readonly
+              />
+
+              <input
+                type="text"
+                id="b8"
+                onclick="myfunc_10();myfunc();"
+                readonly
+              />
+
+              <input
+                type="text"
+                id="b9"
+                onclick="myfunc_11();myfunc();"
+                readonly
+              />
+
+              <!-- Grid end here  -->
+              <br /><br /><br />
+              <!-- Button to reset game -->
+              <button id="but" onclick="myfunc_2()">RESET</button>
+
+              <br /><br />
+              <!-- Space to show player turn -->
+              <p id="print"></p>
+            </div>
           </div>
         </div>
         <div class="back">
-          <div id="b2" class="back-content">
+          <div id="back2" class="back-content">
             <h1>Back 2</h1>
           </div>
         </div>
@@ -47,7 +143,7 @@
           </div>
         </div>
         <div class="back">
-          <div id="b3" class="back-content">
+          <div id="back3" class="back-content">
             <h1>Back 3</h1>
           </div>
         </div>
