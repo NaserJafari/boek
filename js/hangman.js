@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const remainingGuessesElement = document.getElementById("remaining-guesses");
   const roundElement = document.getElementById("round");
   const scoreElement = document.getElementById("score");
+  const resetButton = document.getElementById("reset-button");
 
   let selectedOption = null;
   let wordList = [];
@@ -127,6 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
     remainingGuessesElement.textContent = "";
     clearWordContainer();
     setCategoryButtonsActiveState(false, null);
+    hideResetButton();
+    roundElement.textContent = `Round: ${round}`;
+    scoreElement.textContent = `Score: ${score}`;
   };
 
   const clearWordContainer = () => {
@@ -221,7 +225,31 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(`You lost. The word was: ${revealedWord}`);
       consecutiveWins = 0; // Reset consecutive wins counter
     }
+
+    if (isGameOver()) {
+      showResetButton();
+    } else {
+      hideResetButton();
+    }
   };
+
+  const showResetButton = () => {
+    resetButton.classList.remove("hidden");
+    resetButton.addEventListener("click", resetGame);
+  };
+
+  const hideResetButton = () => {
+    resetButton.classList.add("hidden");
+    resetButton.removeEventListener("click", resetGame);
+  };
+
+  const resetGame = () => {
+    round++;
+    roundElement.textContent = `Round: ${round}`;
+    initializeGame();
+  };
+
+  resetButton.addEventListener("click", resetGame);
 
   animalsButton.addEventListener("click", () => {
     chooseCategory("animals");
