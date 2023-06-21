@@ -37,7 +37,7 @@ const results = function () {
     msg.textContent = "You Win";
     setTimeout(function () {
       reset();
-      location.replace("https://www.w3schools.com/");
+      location.replace("");
     }, 1500);
   }
   msg.classList.remove("hidden");
