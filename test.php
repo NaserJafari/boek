@@ -41,8 +41,8 @@
         </div>
         <div class="back">
           <div id="b2" class="back-content">
-            <h1>Snake spel</h1>
-            <p>Eet zoveel mogelijk voedsel op om groter te worden!</p>
+            <h1>Ping pong</h1>
+            <p>Ping pong!</p>
         </div>
         </div>
       </div>
@@ -50,8 +50,7 @@
       <div id="p3" class="paper">
         <div class="front">
           <div id="f3" class="front-content">
-            <?php include_once("../boek/html/snake.html") ?>
-            <script src="./js/snake.js"></script>
+            <?php include_once("./php/pong.php"); ?>
           </div>
         </div>
         <div class="back">
@@ -60,6 +59,20 @@
           </div>
         </div>
       </div>
+
+      <div id="p4" class="paper">
+        <div class="front">
+          <div id="f4" class="front-content">
+          <?php include_once("./php/tictactoe.php"); ?>
+          </div>
+        </div>
+        <div class="back">
+          <div id="b4" class="back-content">
+            <h1>test</h1>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="buttons">
       <button id="prev-btn" style="margin-right: 500px">
