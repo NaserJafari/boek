@@ -16,9 +16,10 @@ body {
 }
 
 .book {
-  position: relative;
-  width: 600px;
-  height: 650px;
+  position: absolute;
+  left: 600px;
+  width: 400px;
+  height: 550px;
   transition: transform 0.5s;
 }
 .buttons {
@@ -32,7 +33,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  perspective: 1500px;
+  perspective: 1000px;
 }
 
 .front,
@@ -169,4 +170,106 @@ i {
 
   color: dodgerblue;
   font-size: 17px;
+}
+
+#som-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.som-box-container {
+  width: auto;
+  height: auto;
+  background-color: #5adbff;
+  padding: 50px;
+  border-radius: 20px;
+  z-index: 1;
+  border: solid 3px #000;
+  box-shadow: 4px 6px;
+}
+
+#startgame {
+  background-color: #fe9000;
+  padding: 6px;
+  border-radius: 9px;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #ba1f33;
+}
+
+#startgame:hover {
+  cursor: pointer;
+}
+
+#score {
+  color: #fe9000;
+}
+
+#scorevalue {
+  color: #fe9000;
+}
+
+#timeremaining {
+  color: #fe9000;
+}
+
+#timeremainingvalue {
+  color: #fe9000;
+}
+
+#correct {
+  color: green;
+  position: absolute;
+  top: 250px;
+  z-index: -1;
+}
+
+#wrong {
+  color: red;
+  position: absolute;
+  top: 250px;
+  left: 780px;
+}
+
+#question {
+  font-size: 20px;
+}
+
+#choices {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+#box1,
+#box2,
+#box3,
+#box4 {
+  width: 20px;
+  height: 20px;
+  background-color: chocolate;
+}
+
+#box1,
+#box2,
+#box3,
+#box4:hover {
+  cursor: pointer;
+}
+
+#gameover {
+  color: #fe9000;
+  font-size: 50px;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  z-index: 1;
 }
